@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { OriButton } from '@origin-ui/components/button';
+import { Participants } from './participants';
+import { TemplateSwitcher } from './template-switcher';
 
 @Component({
     selector: 'app-header',
     imports: [
-        OriButton
+        OriButton,
+        TemplateSwitcher,
+        Participants
     ],
     template: `
         <header class="fixed top-2 z-50 w-full px-2 md:top-5 md:px-5">
@@ -23,9 +27,12 @@ import { OriButton } from '@origin-ui/components/button';
                     </a>
                 </div>
                 <!--        /* Center area */-->
-                <div class="flex grow justify-center">Switcher</div>
+                <div class="flex grow justify-center">
+                    <template-switcher />
+                </div>
                 <!--        /* Right area */-->
                 <div class="flex flex-1 items-center justify-end gap-4">
+                    <participants />
                     <button class="rounded-lg text-sm" oriButton size="sm">Share</button>
                 </div>
             </div>

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "experiment-07:serve": "nx run experiment-07:serve"
+    "experiment-07:serve": "nx run experiment-07:serve",
+    "experiment-07:build": "nx run experiment-07:build"
   },
   "private": true,
   "dependencies": {

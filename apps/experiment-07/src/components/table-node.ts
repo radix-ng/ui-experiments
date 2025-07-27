@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { OriButton } from '@origin-ui/components/button';
 import { EllipsisVertical, LucideAngularModule } from 'lucide-angular';
-import { CustomNodeComponent } from 'ngx-vflow';
+import { CustomNodeComponent, HandleComponent } from 'ngx-vflow';
 
 export interface TableField {
     name: string;
@@ -19,6 +19,7 @@ export interface TableNodeData {
 @Component({
     selector: 'table-node',
     imports: [
+        HandleComponent,
         OriButton,
         LucideAngularModule
     ],
@@ -55,6 +56,9 @@ export interface TableNodeData {
                     </div>
                 }
             </div>
+
+            <handle type="source" position="left" />
+            <handle type="target" position="right" />
         </div>
     `
 })

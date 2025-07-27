@@ -112,31 +112,36 @@ export class FlowStoreService {
         {
             id: '2 -> 3',
             source: '2',
-            target: '3'
+            target: '3',
+            curve: 'smooth-step'
         },
         // Products to Order Items (one-to-many): products.id -> order_items.product_id
         {
             id: '4 -> 3',
             source: '4',
-            target: '3'
+            target: '3',
+            curve: 'smooth-step'
         },
         // Merchants to Products (one-to-many): merchants.id -> products.merchant_id
         {
             id: '5 -> 4',
             source: '5',
-            target: '4'
+            target: '4',
+            curve: 'smooth-step'
         },
         // Countries to Users (one-to-many): countries.code -> users.country_code
         {
             id: '6 -> 1',
             source: '6',
-            target: '1'
+            target: '1',
+            curve: 'smooth-step'
         },
         // Countries to Merchants (one-to-many): countries.code -> merchants.country_code
         {
             id: '6 -> 5',
             source: '6',
-            target: '5'
+            target: '5',
+            curve: 'smooth-step'
         }
     ];
 }
